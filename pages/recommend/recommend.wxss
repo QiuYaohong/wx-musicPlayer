@@ -1,0 +1,71 @@
+/* pages/recommend/recommend.wxss */
+
+@import "../template/item.wxss";
+
+/* 
+    轮播图
+*/
+
+.swiper {
+   
+}
+
+.swiper-image {
+    width: 100%;
+}
+
+/* 
+
+歌单推荐
+
+*/
+
+.recommendSongs {
+    width: 100%;
+}
+
+.recommendSongs .title {
+    margin-top: 10rpx;
+    margin-left: 20rpx;
+    color: #2095DD
+}
+
+.recommendSongs .item-container {
+    margin-top: 10rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap
+}
+
+.recommendSongs .item-container .gedan-item {
+    margin: 10rpx 0
+}
+
+/* 
+  热门分类
+      甜蜜 流行 网络 影视 DJ 经典
+*/
+.tag{
+    width: 100%;
+}
+.tag .title{
+    margin-top: 10rpx;
+    margin-left: 20rpx;
+    color: #2095DD
+}
+.tag-container{
+    margin-top: 10rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap
+}
+.tag-container .tag-item{
+    margin: 10rpx 0;
+    width: 202rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    border: 1px solid #d0e3ee;
+}

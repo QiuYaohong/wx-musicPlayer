@@ -1,0 +1,51 @@
+<view class="playing">
+  <!-- 专辑图片 -->
+  <view class="top">
+    <view class="top-c">
+      <view class="avtor">
+        <image class="{{playStatus?'rotate':'rotate-paused'}}" mode="scaleToFill" src="{{songinfo.pic?songinfo.pic:'../../img/defpic_240.png'}}" />
+      </view>
+    </view>
+  </view>
+  <!-- 歌词 区域 -->
+  <view class="lyr">
+    <view class="no-lyr" wx:if="{{lrc==0}}">
+      <text>听音乐 用酷我</text>
+    </view>
+    <!-- 歌词滚动 -->
+    <view class="lyrics">
+      <scroll-view class="scroll" bindscrolltoupper="scrolltoupper" bindscrolltolower="scrolltolower" scroll-y="true" scroll-with-animation='true' scroll-top="{{scrollTop}}" style="height:{{winHeight}}rpx">
+        <view class="lyrics-c">
+          <view wx:for="{{lrc}}" class="txt {{currentIndex == index ? 'currentLine' : ''}}" data-time="{{item.time}}" wx:key="{{index}}">
+            {{item.lineLyric}}
+          </view>
+        </view>
+        <!-- 歌词 -->
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 控制 -->
+  <view class="control">
+    <!-- 进度条 -->
+    <view class="progress-slider">
+      <!-- 歌曲播放当前时间 -->
+      <text class="currentTime">{{progressText}}</text>
+      <slider class="slider" bindchange="sliderChange" bindchanging="sliderChanging" value="{{progress}}" step="1" min='0' max='{{duration}}' block-size="16" block-color="#ffeb43" activeColor="#E46703" backgroundColor="#f2f2" />
+      <!-- 歌曲时长 -->
+      <text class="duration">{{durationText}}</text>
+    </view>
+    <view class="play-btn">
+      <view class="pre icon">
+        <!-- <image mode="widthFix" src="../../img/bluepre.png" /> -->
+      </view>
+      <!--  -->
+      <view class="playmode icon" catch:tap="playOrpause">
+        <image mode="widthFix" class="play" src="{{playStatus?'../../img/blueplay.png':'../../img/bluestop.png'}}" />
+      </view>
+      <!--  -->
+      <view class="next icon">
+        <!-- <image mode="widthFix" src="../../img/bluenext.png" /> -->
+      </view>
+    </view>
+  </view>
+</view>

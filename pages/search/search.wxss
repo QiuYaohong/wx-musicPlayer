@@ -1,0 +1,124 @@
+/* pages/search/search.wxss */
+@import "../template/item.wxss";
+@import "../template/mv-item.wxss";
+
+.top {
+  display: flex;
+  justify-content: center;
+}
+
+.top .container {
+  width: 90%;
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search {
+  width: 78%;
+}
+
+.search input {
+  height: 60rpx;
+  border-radius: 6rpx;
+  border: 1px solid #ffeb43;
+  padding: 0 3%;
+}
+
+.search-btn {
+  width: 16%;
+  border-radius: 6rpx;
+  font-weight: 400;
+  text-align: center;
+  background-color: #46b4e6;
+  color: #fff;
+}
+
+/* 
+搜索结果
+
+*/
+
+.search-result {
+  width: 100%;
+}
+
+.search-result .top {
+  font-size: 24rpx;
+  padding: 25rpx;
+}
+
+.search-result .type-select {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #46b4e6;
+}
+
+.search-result .type-select .type-item {
+  color: #46b4e6;
+  position: relative;
+}
+
+.active {
+  position: absolute;
+  z-index: 2;
+  border-bottom: 2px solid #46b4e6;
+}
+
+.res-content {
+  padding: 20rpx 10rpx;
+}
+
+.res-content .res-song {
+  display: flex;
+  flex-direction: column;
+}
+
+.res-song .item {
+  border-bottom: 2rpx solid #f2f2f2;
+}
+
+.res-song .item:last-child {
+  border: 0;
+}
+
+/* 
+    mv
+*/
+
+.mv-c {
+  margin: 8rpx 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.mv-c:last-child {
+  border: 0;
+}
+
+/* 
+
+热门搜索推荐
+
+*/
+
+.search-keword {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.search-keword .keyword {
+  width: 48%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-keword .keyword .name {
+  font-size: 28rpx;
+  padding: 15rpx;
+  margin: 5rpx;
+  color: #000;
+  text-align: center;
+}

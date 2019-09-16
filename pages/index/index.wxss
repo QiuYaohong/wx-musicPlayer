@@ -1,0 +1,42 @@
+/**index.wxss**/
+
+page {
+  height: 100%;
+  background-color: #ebebeb;
+}
+
+.in-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.start image {
+  width: 120rpx;
+  animation: rotate infinite linear 8s;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+.title {
+  margin-top: 180rpx;
+}
+
+.dec {
+  font-size: 50rpx;
+  /* color: #2095dd; */
+  color: rgb(86,186,183);
+  font-weight: bold;
+  letter-spacing: 0.5em;
+}

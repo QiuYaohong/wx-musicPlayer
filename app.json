@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/recommend/recommend",
+    "pages/rank/rank",
+    "pages/category/category",
+    "pages/mv/mv",
+    "pages/mv/m-playing/m-playing",
+    "pages/mv/mvList/mvList",
+    "pages/search/search",
+    "pages/songs/songs",
+    "pages/gedan/gedan",
+    "pages/playing/playing",
+    "pages/mine/mine"
+  ],
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "tabBar": {
+    "color": "#333",
+    "backgroundColor": "#f2f2f2",
+    "selectedColor": "#f00",
+    "list": [
+      {
+        "pagePath": "pages/recommend/recommend",
+        "text": "推荐",
+        "iconPath": "img/tabbar/2.png",
+        "selectedIconPath": "img/tabbar/2-hl.png"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "text": "排行",
+        "iconPath": "img/tabbar/4.png",
+        "selectedIconPath": "img/tabbar/4-hl.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "img/tabbar/3.png",
+        "selectedIconPath": "img/tabbar/3-hl.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "img/tabbar/5.png",
+        "selectedIconPath": "img/tabbar/5-hl.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的音乐",
+        "iconPath": "img/tabbar/1.png",
+        "selectedIconPath": "img/tabbar/1-hl.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2095DD",
+    "navigationBarTitleText": "与音乐一起分享时光",
+    "navigationBarTextStyle": "white"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "sitemapLocation": "sitemap.json"
+}

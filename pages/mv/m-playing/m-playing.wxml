@@ -1,0 +1,29 @@
+<!--pages/mv/play/play.wxml-->
+
+<view class="video-container">
+  <video src="{{mvlink}}" bindfullscreenchange="screenchange" object-fit="fill" play-btn-position="center" autoplay enable-play-gesture controls />
+
+  <view class="comment">
+
+    <view class="top">最新评论
+      <text>{{commentData.total>0?commentData.total:'0'}}条</text>
+    </view>
+
+    <view class="comment-content">
+
+      <view class="comment-item" wx:for="{{commentData.rows}}" wx:key="{{index}}">
+        <view class="avtor">
+          <image src="{{item.u_pic?item.u_pic:'../../../img/defpic_240.png'}}" mode="widthFix"></image>
+        </view>
+        <view class="info">
+          <!-- item.u_name -->
+          <view class="author">{{decodeURIComponent(item.u_name)}}</view>
+          <view class="msg">{{item.msg}}</view>
+          <view class="dateTime">{{item.time}}</view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+</view>

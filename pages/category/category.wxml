@@ -1,0 +1,25 @@
+<!-- pages/category/category.wxml -->
+<view class="category">
+    <view class="category-par" wx:for="{{tagList}}" wx:key="index">
+        <view class="par-name">{{item.name}}</view>
+        <view class="category-c">
+            <block wx:for="{{item.data}}" wx:key="{{item.id}}">
+                <view class="category-name" data-id="{{item.id}}" data-name="{{item.name}}" bind:tap="toGedan">
+                    <text>{{item.name}}</text>
+                </view>
+            </block>
+            <!-- 没有数据 -->
+            <view wx:if="{{item.data==0}}">
+                <view class="no-category">
+                    <text>与音乐一起分享时光....</text>
+                </view>
+                <view class="no-category">
+                    <text>与音乐一起分享时光....</text>
+                </view>
+                <view class="no-category">
+                    <text>与音乐一起分享时光....</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

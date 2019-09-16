@@ -1,0 +1,9 @@
+<!--pages/mine/mine.wxml-->
+
+<view class="mine-container">
+
+  <view>我的音乐</view>
+
+
+
+</view>

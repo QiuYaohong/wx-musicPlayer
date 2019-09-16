@@ -1,0 +1,71 @@
+.gedan-item {
+  width: 202rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.gedan-item .img {
+  text-align: center;
+}
+
+.gedan-item .img image {
+  width: 173rpx;
+}
+
+.gedan-title {
+  padding: 0 10rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+/* 
+
+歌曲列表
+ */
+
+.song-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 94rpx;
+}
+
+.song-item .left {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.song-item .left .is-player {
+  display: flex;
+  flex-direction: row;
+}
+
+.song-item .left .is-player .song-name {
+  color: #000;
+  font-size: 32rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.song-item .left .singer-song {
+  color: #636363;
+  font-size: 24rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end
+}
+
+.right .hasmv {
+  width: 40rpx;
+}

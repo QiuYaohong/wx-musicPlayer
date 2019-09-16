@@ -1,0 +1,40 @@
+<!-- 歌单 -->
+<template name="gedan-item">
+  <view class="gedan-item">
+    <view class="img">
+      <image mode="widthFix" src="{{img?img:'../../img/defpic_240.png'}}" />
+    </view>
+    <view class="gedan-title">{{name}}</view>
+  </view>
+</template>
+<!-- 歌曲 -->
+<template name="song-item">
+  <view class="song-item">
+    <!-- left -->
+    <view class="left" data-rid="{{rid}}" catch:tap="gotoMusicPlaying">
+      <!--  -->
+      <view class="is-player">
+        <!-- <image wx:if="" mode="widthFix" style="width:40rpx" src="../../img/singDt.png" /> -->
+        <text class="song-name">{{name}}</text>
+        <view class="singWs">
+          <image wx:if="{{hasLossless}}" mode="widthFix" style="width:60rpx;height:36rpx" src="../../img/singWs.png" />
+        </view>
+        <!-- 超品 -->
+        <view class="singCp">
+          <!-- <image mode="widthFix" style="width:60rpx;height:36rpx" src="../../img/singCp.png" /> -->
+        </view>
+      </view>
+      <view class="singer-song">{{artist}}-{{album}}</view>
+    </view>
+    <!-- right -->
+    <view class="right">
+      <view class="hasmv" data-rid="{{rid}}" data-info="{{name}}" catchtap="mvPlay">
+        <!-- hasmv:0 无法播放 -->
+        <image wx:if="{{hasmv!=0}}" class="hasMv" src="../../img/singMv.png" mode="widthFix" style="width:40rpx;" />
+      </view>
+      <view class="download" catchtap="download">
+        <image mode="widthFix" style="width:40rpx" src="../../img/singDom.png" />
+      </view>
+    </view>
+  </view>
+</template>

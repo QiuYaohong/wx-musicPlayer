@@ -1,0 +1,15 @@
+<!-- pages/rank/rank.wxml -->
+
+<view class="bangMenu">
+
+  <view class="bangMenu-item">
+    <block wx:for="{{bangList}}" wx:key="index">
+      <view class=".item-c" data-id="{{item.sourceid}}" data-pic="{{item.pic}}" data-name="{{item.name}}" catch:tap="gotoSongs">
+        <view class="pic">
+          <image src="{{item.pic}}" />
+        </view>
+        <view class="name">{{item.name}}</view>
+      </view>
+    </block>
+  </view>
+</view>

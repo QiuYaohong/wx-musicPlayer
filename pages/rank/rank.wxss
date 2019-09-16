@@ -1,0 +1,35 @@
+/* pages/rank/rank.wxss */
+
+.bangMenu {
+  padding: 0 5%;
+}
+
+.bangMenu-item {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.item-c {
+  margin: 3%;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 27.3%;
+  justify-content: center;
+}
+
+.pic {
+  display: flex;
+}
+
+.pic image {
+  width: 176rpx;
+  height: 176rpx;
+}
+
+.item-c .name {
+  padding: 10rpx 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-wrap: nowrap;
+  font-size: 32rpx;
+}

@@ -1,0 +1,11 @@
+<!-- index.wxml -->
+<view class="in-container">
+
+  <view class="start">
+    <image mode="widthFix" src="../../img/music-start.png" bind:tap="bindViewTap"></image>
+
+  </view>
+  <view class="title">
+    <text class="dec">与音乐一起分享时光</text>
+  </view>
+</view>

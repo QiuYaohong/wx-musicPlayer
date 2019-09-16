@@ -1,0 +1,27 @@
+<import src="../template/item.wxml"></import>
+<!-- pages/gedan/gedan.wxml -->
+<view class="gedan">
+    <view class="top">
+        <image class="blur" src="{{musicData.img||pic}}" />
+        <view class="cover">
+            <!-- 顶部图片 -->
+            <view class="img">
+                <image style="width:180rpx;" mode="widthFix" src="{{musicData.img || pic}}" />
+            </view>
+            <view class="info">
+                <view class="dec">
+                    <text>{{musicData.info}}</text>
+                </view>
+                <view class="singPlay" style="width:66rpx">
+                    <image style="width:66rpx" mode="widthFix" src="../../img/singPlay.png" />
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 歌曲列表 -->
+    <view class="songs-container">
+        <view class="item" wx:for="{{musicData.musicList}}" wx:key="index">
+            <template is="song-item" data="{{...item}}"></template>
+        </view>
+    </view>
+</view>

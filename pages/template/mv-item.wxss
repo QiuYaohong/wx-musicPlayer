@@ -1,0 +1,38 @@
+/* 
+
+mv
+*/
+
+.mv-item {
+  display: flex;
+}
+
+.mv-item .img {
+  flex: 2;
+}
+
+.mv-item .img image {
+  width: 270rpx;
+}
+
+.mv-item .detail {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mv-item .detail .mv-title {
+  width: 90%;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #000;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.mv-item .detail .author {
+  font-size: 24rpx;
+  color: #6c6c6c;
+}

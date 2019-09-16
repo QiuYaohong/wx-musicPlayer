@@ -1,0 +1,14 @@
+<!-- pages/mv/mv.wxml
+<view class="mv">
+
+    <view class="mv-item" wx:for="{{mvTags}}" wx:key="index" data-id="{{item.id}}" data-name="{{item.name}}" catch:tap="goToMvList">
+        <view class="img">
+            <image mode="widthFix" src="{{item.img}}" />
+        </view>
+        <view class="name">
+            {{item.name}}
+        </view>
+    </view>
+
+
+</view> -->

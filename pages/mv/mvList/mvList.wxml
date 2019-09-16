@@ -1,0 +1,7 @@
+<import src="../../template/mv-item.wxml"></import>
+<!-- pages/mv/mvList/mvList.wxml -->
+<view class="mv-list">
+    <view class="mv-c" wx:for="{{mvList}}" wx:key="index" data-id="{{item.id}}" data-info="{{item.name}}-{{item.artist}}" catch:tap="gotoPlay">
+        <template is="mv-item" data="{{...item}}"></template>
+    </view>
+</view>

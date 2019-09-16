@@ -1,0 +1,54 @@
+<!-- pages/search/search.wxml -->
+<import src="../template/item.wxml"></import>
+<import src="../template/mv-item.wxml"></import>
+<view class="search-page">
+  <!-- 顶部输入框 -->
+  <view class="top">
+    <view class="container">
+      <view class="search">
+        <input bindinput="bindinput" type="text" value="{{key}}" placeholder="歌曲/歌名/歌词" />
+      </view>
+      <view class="search-btn" catchtap="searchResult">搜索</view>
+    </view>
+  </view>
+  <!-- 热门搜索推荐 -->
+  <view class="search-keword" wx:if="{{isfade}}">
+    <view class="keyword" wx:for="{{keyList}}" wx:key="{{index}}">
+      <view class="name" data-key="{{item}}" catchtap="searchTag">
+        <text>{{item}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 搜索结果 -->
+  <view class="search-result" wx:if="{{!isfade}}">
+    <view class="top" wx:if="{{showIndex==0}}">找到{{musicData.total}}个结果,更多结果可下载APP查看</view>
+    <view class="top" wx:if="{{showIndex==1}}">找到 {{mvData.total}}个结果,更多结果可下载APP查看</view>
+    <view class="top" wx:if="{{showIndex==2}}">找到 个结果,更多结果可下载APP查看</view>
+    <view class="top" wx:if="{{showIndex==3}}">找到 个结果,更多结果可下载APP查看</view>
+    <view class="type-select">
+      <view class="type-item {{index===showIndex?'active':''}}" data-index="{{index}}" catchtap="currentIndx" wx:for="{{tagList}}" wx:key="{{index}}">
+        {{item}}
+      </view>
+    </view>
+    <view class="res-content">
+      <!-- 歌曲 -->
+      <view class="res-song">
+        <view class="noResult" wx:if="{{musicData.list.length===0}}">暂时没有找到合适的结果,换个词试试?</view>
+        <view wx:if="{{showIndex==0}}" class="item" wx:for="{{musicData.list}}" wx:key="index">
+          <template is="song-item" data="{{...item}}"></template>
+        </view>
+      </view>
+      <!-- mv -->
+      <view wx:if="{{showIndex==1}}" class="res-mv">
+        <view class="noResult" wx:if="{{mvData.total==0}}">暂时没有找到合适的结果,换个词试试?</view>
+        <view class="mv-c" wx:for="{{mvData.mvlist}}" wx:key="index" data-rid="{{item.id}}" data-info="{{item.name}}-{{item.artist}}" catch:tap="mvPlay">
+          <template is="mv-item" data="{{...item}}"></template>
+        </view>
+      </view>
+      <!-- 歌手 -->
+      <view wx:if="{{showIndex==2}}" class="res-artist">歌手</view>
+      <!-- 专辑 -->
+      <view wx:if="{{showIndex==3}}" class="res-album">专辑</view>
+    </view>
+  </view>
+</view>

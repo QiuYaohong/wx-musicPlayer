@@ -1,0 +1,17 @@
+/* pages/mv/mvList/mvList.wxss */
+@import "../../template/mv-item.wxss";
+
+.mv-list {
+  width: 100%;
+  overflow: hidden;
+}
+
+.mv-c {
+  padding: 0 10rpx;
+  margin: 8rpx 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.mv-c:last-child {
+  border-bottom: 0;
+}

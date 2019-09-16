@@ -1,0 +1,70 @@
+/* pages/gedan/gedan.wxss */
+@import "../template/item.wxss";
+
+.top {
+    position: relative;
+    height: 260rpx;
+    display: flex;
+    overflow: hidden;
+}
+
+.blur {
+    width: 100%;
+    filter: blur(25rpx)
+}
+
+.cover {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .5)
+}
+
+.top .cover .img {
+    flex: 1;
+    text-align: center;
+    margin: 0 15rpx 0 30rpx;
+}
+
+.top .cover .info {
+    width: 90%;
+    height: 198rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 26rpx;
+    color: #fff
+}
+.top .cover .info .dec{
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.top .cover .info .singPlay {
+    align-self: flex-end;
+    width: 72rpx;
+    height: 72rpx;
+    transform: translateX(-25rpx)
+}
+
+/* 
+
+歌曲列表
+
+*/
+
+.songs-container {
+    margin-top: 10rpx;
+    padding: 0 20rpx;
+}
+
+.gedan .songs-container .item {
+    padding: 10rpx 0;
+    border-bottom: 1px solid #dfdfdf
+}
+

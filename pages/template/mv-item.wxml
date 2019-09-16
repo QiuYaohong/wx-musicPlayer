@@ -1,0 +1,12 @@
+<!-- mv -->
+<template name="mv-item">
+  <view class="mv-item">
+    <view class="img">
+      <image mode="widthFix" src="{{pic?pic:'../../img/defpic_240.png'}}" />
+    </view>
+    <view class="detail">
+      <view class="mv-title">{{name}}</view>
+      <view class="author">{{artist}}</view>
+    </view>
+  </view>
+</template>

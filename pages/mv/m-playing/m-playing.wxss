@@ -1,0 +1,70 @@
+/* pages/mv/play/play.wxss */
+
+.video-container {
+  width: 100%;
+}
+
+.video-container video {
+  width: 100%;
+}
+
+/* 
+
+评论
+ */
+
+.comment {
+  padding: 20rpx;
+}
+
+.comment .top {
+  font-size: 32rpx;
+  padding: 20rpx 0;
+}
+
+.comment .top text {
+  font-size: 24rpx;
+}
+
+.comment-content .comment-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 10rpx;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+
+.comment-content .comment-item:last-child {
+  border: 0;
+}
+
+.comment-item .avtor {
+  width: 20%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.comment-item .avtor image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.comment-item .info {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30rpx;
+}
+
+.comment-item .info .msg, .comment-item .info .author {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.comment-item .info .dateTime {
+  color: #666;
+  font-size: 24rpx;
+}

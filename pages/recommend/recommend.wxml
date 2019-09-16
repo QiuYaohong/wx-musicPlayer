@@ -1,0 +1,48 @@
+<!-- pages/recommend/recommend.wxml -->
+<view class="recommend">
+  <!-- 轮播图 -->
+  <view class="swiper">
+    <swiper circular="true" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+      <block wx:for="{{swiperList}}" wx:key="index">
+        <swiper-item>
+          <image mode="scaleToFill" class="swiper-image" src="{{item.imgUrl}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 主体内容 -->
+  <view class="conatiner">
+    <!-- 每日新歌 -->
+    <view class="daily-songs"></view>
+    <!-- 歌单推荐 -->
+    <view class="recommendSongs">
+      <view class="title">
+        <text>歌单推荐</text>
+      </view>
+      <view class="item-container">
+        <block wx:for="{{list}}" wx:key="index">
+          <view class="" data-id="{{item.id}}" catch:tap="gotoSongs">
+            <template class="gedan-item" is="gedan-item" data="{{...item}}"></template>
+          </view>
+        </block>
+      </view>
+    </view>
+    <!-- 
+      热门分类
+      甜蜜 流行 网络 影视 DJ 经典
+     -->
+    <!-- <view class="s" bindtap="gotoPlaying" wx:if="{{iShow}}">音乐后台播放中</view> -->
+
+    <view class="tag">
+      <view class="title">
+        <text>热门分类</text>
+      </view>
+      <view class="tag-container">
+        <block wx:for="{{tags}}" wx:key="index">
+          <view class="tag-item" data-id="{{item.id}}" data-name="{{item.name}}" catch:tap="gotoGedan">{{item.name}}</view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
+<import src="../template/item.wxml"></import>

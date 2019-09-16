@@ -1,0 +1,26 @@
+/* pages/mv/mv.wxss */
+.mv{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 34rpx;
+}
+
+.mv-item{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    text-align: center
+}
+.mv-item .img{
+    display: flex;
+    justify-content: center
+}
+.mv-item .img image{
+    width: 177rpx;
+    border-radius: 8rpx;
+}
+.mv-item .name{
+    margin-top: 6rpx;
+}

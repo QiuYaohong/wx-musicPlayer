@@ -1,0 +1,14 @@
+<!-- pages/gedan/gedan.wxml -->
+<view class="songList">
+    <block wx:for="{{musicList}}" wx:key="index">
+            <view class="songs-item" catch:tap="gotoSongs" data-id="{{item.id}}" catch:tap="gotoSongs">
+                <view class="avtor">
+                    <image mode="widthFix" wx:if="{{item.img}}" src="{{item.img}}" />
+                </view>
+                <view class="info">
+                    <view class="title">{{item.name}}</view>
+                    <view class="total">{{item.total}}首歌曲</view>
+                </view>
+            </view>
+    </block>
+</view>

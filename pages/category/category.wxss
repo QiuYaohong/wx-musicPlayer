@@ -1,0 +1,37 @@
+/* pages/category/category.wxss */
+
+.category {
+  width: 100%;
+}
+
+.category-par {
+  padding: 12rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-par .par-name {
+  padding: 20rpx;
+  color: #46b4e6;
+}
+
+.category-c {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-name {
+  flex: 0 1 204rpx;
+  display: flex;
+  justify-content: center;
+  margin: 10rpx 15rpx;
+  font-size: 32rpx;
+  color: #333;
+  border: 1px solid #46b4e6;
+}
+
+.no-category {
+  color: #46b4e6;
+  padding-left: 12rpx;
+}

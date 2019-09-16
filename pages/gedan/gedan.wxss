@@ -1,0 +1,41 @@
+/* pages/gedan/gedan.wxss */
+
+.songList {
+    padding: 0 20rpx;
+}
+
+.songs-item {
+    display: flex;
+    height: 178rpx;
+    padding: 10rpx;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.avtor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.avtor image {
+    width: 150rpx;
+}
+
+.info {
+    margin-left: 24rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start
+}
+
+.info .title {
+    width: 100%;
+    overflow: hidden;
+    font-size: 36rpx;
+    font-weight: 400;
+}
+
+.info .total {
+    font-size: 24rpx;
+}
